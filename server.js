@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
 
     socket.on('message', (inPos) => {
         console.log(inPos)
-        io.emit('message', inPos)
+        socket.broadcast.emit('message', inPos)
     })
 })
 
